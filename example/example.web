@@ -1,0 +1,24 @@
+% This is a simple WEB program to compute Fibonacci numbers.
+
+@* Introduction.
+This program computes the first |nn| Fibonacci numbers and prints them.
+
+@d nn = 10 {The number of Fibonacci numbers to compute}
+
+@p
+function fib(k: integer): integer;
+begin
+    if k <= 1 then
+        fib := k
+    else
+        fib := fib(k-1) + fib(k-2);
+end;
+
+@* Main program.
+
+@p
+var i:integer;
+begin
+    for i := 0 to nn-1 do
+        writeln(fib(i));
+end.
